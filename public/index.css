@@ -1,0 +1,81 @@
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main */
+#canvas {
+    position: absolute;
+    inset: 0;
+}
+
+/* Inventory */
+.inventory {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inventory .inventory-items {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: gray;
+}
+
+.inventory .inventory-items li {
+    width: 2.5em;
+    aspect-ratio: 1;
+    place-self: center;
+}
+
+/* Hotbar */
+.hotbar {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hotbar .hotbar-items {
+    display: flex;
+    align-items: center;
+}
+
+.hotbar .hotbar-items li {
+    width: 3rem;
+    aspect-ratio: 1;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+
+.hotbar .hotbar-items li.selected {
+    outline: 2px solid black;
+}
+
+/* Utils */
+.togglable {
+    visibility: hidden;
+}
+
+.togglable.active {
+    visibility: visible;
+}
